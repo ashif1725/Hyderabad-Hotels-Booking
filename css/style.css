@@ -1,63 +1,44 @@
-body {
-  margin: 0;
-  font-family: Arial;
-}
-
-/* Header */
-.header {
-  display: flex;
-  justify-content: space-between;
-  background: black;
-  color: white;
+/* Room Page Premium */
+.room-container {
   padding: 15px;
 }
 
-.header a {
-  color: white;
-  margin: 10px;
-  text-decoration: none;
+.room-card img {
+  width: 100%;
+  border-radius: 10px;
 }
 
-/* Hero */
-.hero {
-  background: url('https://images.unsplash.com/photo-1501117716987-c8e1ecb210b5');
-  height: 250px;
-  color: white;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-/* Search */
-.search-box {
+.gallery {
   display: flex;
   gap: 10px;
-  padding: 15px;
-  justify-content: center;
-}
-
-.search-box input {
-  padding: 10px;
-}
-
-.search-box button {
-  background: orange;
-  border: none;
-  padding: 10px;
-  color: white;
-}
-
-/* Hotels */
-.featured {
-  padding: 20px;
-}
-
-.hotel-card {
   margin: 10px 0;
 }
 
-.hotel-card img {
+.gallery img {
+  width: 30%;
+  border-radius: 8px;
+}
+
+.price {
+  font-size: 20px;
+  color: green;
+  font-weight: bold;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+ul li {
+  margin: 5px 0;
+}
+
+button {
+  background: #ff6600;
+  color: white;
+  border: none;
+  padding: 12px;
   width: 100%;
-  border-radius: 10px;
+  border-radius: 5px;
 }
