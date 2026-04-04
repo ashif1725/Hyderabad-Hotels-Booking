@@ -9,31 +9,37 @@
 <body>
 
 <header class="header">
-  <h2>🏨 Hyderabad Hotel Booking</h2>
+  <h2>🏨 Lemon Tree Hotel</h2>
 </header>
 
 <div id="room"></div>
 
 <script>
 const params = new URLSearchParams(window.location.search);
-const hotel = params.get("hotel");
+const room = params.get("room");
 
 let data = "";
 
-// Luxury Palace
-if(hotel === "Luxury Palace") {
+// DELUXE ROOM
+if(room === "deluxe") {
 data = `
 <div class="room-card">
+<h2>Deluxe Room</h2>
+
+<div class="gallery">
 <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945">
-<h2>Luxury Palace Deluxe Room</h2>
-<p>⭐⭐⭐⭐⭐ Premium Luxury Stay</p>
+<img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa">
+<img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b">
+<img src="https://images.unsplash.com/photo-1501117716987-c8e1ecb210b5">
+</div>
+
 <p class="price">₹3500 / night</p>
 
 <ul>
-<li>✔ AC Room</li>
-<li>✔ Free WiFi</li>
+<li>✔ King Size Bed</li>
+<li>✔ AC + WiFi</li>
 <li>✔ Breakfast Included</li>
-<li>✔ Swimming Pool</li>
+<li>✔ Smart TV</li>
 <li>✔ Room Service</li>
 </ul>
 
@@ -41,42 +47,52 @@ data = `
 </div>`;
 }
 
-// Royal Stay
-if(hotel === "Royal Stay") {
+// FAMILY ROOM
+if(room === "family") {
 data = `
 <div class="room-card">
+<h2>Family Room</h2>
+
+<div class="gallery">
 <img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa">
-<h2>Royal Stay Deluxe Room</h2>
-<p>⭐⭐⭐⭐⭐ Luxury Comfort</p>
-<p class="price">₹2800 / night</p>
+<img src="https://images.unsplash.com/photo-1566073771259-6a8506099945">
+<img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b">
+<img src="https://images.unsplash.com/photo-1501117716987-c8e1ecb210b5">
+</div>
+
+<p class="price">₹4500 / night</p>
 
 <ul>
-<li>✔ AC Room</li>
-<li>✔ Free WiFi</li>
-<li>✔ Parking</li>
-<li>✔ Smart TV</li>
-<li>✔ 24/7 Service</li>
+<li>✔ 2 Beds</li>
+<li>✔ AC + WiFi</li>
+<li>✔ Family Space</li>
+<li>✔ TV + Sofa</li>
 </ul>
 
 <a href="booking.html"><button>Book Now</button></a>
 </div>`;
 }
 
-// Green Leaf
-if(hotel === "Green Leaf") {
+// SUITE ROOM
+if(room === "suite") {
 data = `
 <div class="room-card">
+<h2>Suite Room</h2>
+
+<div class="gallery">
 <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b">
-<h2>Green Leaf Deluxe Room</h2>
-<p>⭐⭐⭐⭐⭐ Nature View Stay</p>
-<p class="price">₹2200 / night</p>
+<img src="https://images.unsplash.com/photo-1566073771259-6a8506099945">
+<img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa">
+<img src="https://images.unsplash.com/photo-1501117716987-c8e1ecb210b5">
+</div>
+
+<p class="price">₹6500 / night</p>
 
 <ul>
-<li>✔ AC Room</li>
-<li>✔ Free WiFi</li>
-<li>✔ Garden View</li>
-<li>✔ Balcony</li>
-<li>✔ Breakfast</li>
+<li>✔ Luxury Suite</li>
+<li>✔ Living Area</li>
+<li>✔ Bathtub</li>
+<li>✔ Premium Service</li>
 </ul>
 
 <a href="booking.html"><button>Book Now</button></a>
