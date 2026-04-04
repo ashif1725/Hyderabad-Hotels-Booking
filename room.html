@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,7 +13,8 @@
   <h2>🌅 Sunrise Hotels</h2>
 </header>
 
-<section id="room-details"></section>
+<!-- 🔥 Room Details -->
+<section class="room-container" id="room-details"></section>
 
 <script>
 const params = new URLSearchParams(window.location.search);
@@ -24,21 +24,57 @@ let content = "";
 
 if(hotel === "Luxury Palace") {
   content = `
+  <div class="room-card">
+    <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945">
+    
     <h2>Luxury Palace Hotel</h2>
-    <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945" style="width:100%">
-    <p>Price: ₹3500/night</p>
-    <p>AC Room, Free WiFi, Breakfast Included</p>
+    <p>⭐⭐⭐⭐⭐ Banjara Hills, Hyderabad</p>
+
+    <div class="gallery">
+      <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945">
+      <img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa">
+      <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b">
+    </div>
+
+    <p class="price">₹3500 / night</p>
+
+    <ul>
+      <li>✔ AC Room</li>
+      <li>✔ Free WiFi</li>
+      <li>✔ Breakfast Included</li>
+      <li>✔ Swimming Pool</li>
+    </ul>
+
     <a href="booking.html"><button>Book Now</button></a>
+  </div>
   `;
 }
 
 else if(hotel === "Royal Stay") {
   content = `
+  <div class="room-card">
+    <img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa">
+    
     <h2>Royal Stay Inn</h2>
-    <img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa" style="width:100%">
-    <p>Price: ₹2800/night</p>
-    <p>Luxury Room, Pool, Free WiFi</p>
+    <p>⭐⭐⭐⭐⭐ Hitech City, Hyderabad</p>
+
+    <div class="gallery">
+      <img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa">
+      <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945">
+      <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b">
+    </div>
+
+    <p class="price">₹2800 / night</p>
+
+    <ul>
+      <li>✔ Luxury Room</li>
+      <li>✔ Pool Access</li>
+      <li>✔ Free WiFi</li>
+      <li>✔ Parking</li>
+    </ul>
+
     <a href="booking.html"><button>Book Now</button></a>
+  </div>
   `;
 }
 
