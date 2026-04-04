@@ -1,7 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Room Details</title>
 <link rel="stylesheet" href="css/style.css">
@@ -13,72 +12,42 @@
   <h2>🌅 Sunrise Hotels</h2>
 </header>
 
-<!-- 🔥 Room Details -->
-<section class="room-container" id="room-details"></section>
+<div id="room"></div>
 
 <script>
 const params = new URLSearchParams(window.location.search);
 const hotel = params.get("hotel");
 
-let content = "";
+let data = "";
 
 if(hotel === "Luxury Palace") {
-  content = `
-  <div class="room-card">
-    <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945">
-    
-    <h2>Luxury Palace Hotel</h2>
-    <p>⭐⭐⭐⭐⭐ Banjara Hills, Hyderabad</p>
-
-    <div class="gallery">
-      <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945">
-      <img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa">
-      <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b">
-    </div>
-
-    <p class="price">₹3500 / night</p>
-
-    <ul>
-      <li>✔ AC Room</li>
-      <li>✔ Free WiFi</li>
-      <li>✔ Breakfast Included</li>
-      <li>✔ Swimming Pool</li>
-    </ul>
-
-    <a href="booking.html"><button>Book Now</button></a>
-  </div>
+  data = `
+  <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945">
+  <h2>Luxury Palace Hotel</h2>
+  <p>₹3500/night</p>
+  <a href="booking.html?hotel=Luxury Palace"><button>Book Now</button></a>
   `;
 }
 
-else if(hotel === "Royal Stay") {
-  content = `
-  <div class="room-card">
-    <img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa">
-    
-    <h2>Royal Stay Inn</h2>
-    <p>⭐⭐⭐⭐⭐ Hitech City, Hyderabad</p>
-
-    <div class="gallery">
-      <img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa">
-      <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945">
-      <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b">
-    </div>
-
-    <p class="price">₹2800 / night</p>
-
-    <ul>
-      <li>✔ Luxury Room</li>
-      <li>✔ Pool Access</li>
-      <li>✔ Free WiFi</li>
-      <li>✔ Parking</li>
-    </ul>
-
-    <a href="booking.html"><button>Book Now</button></a>
-  </div>
+if(hotel === "Royal Stay") {
+  data = `
+  <img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa">
+  <h2>Royal Stay Inn</h2>
+  <p>₹2800/night</p>
+  <a href="booking.html?hotel=Royal Stay"><button>Book Now</button></a>
   `;
 }
 
-document.getElementById("room-details").innerHTML = content;
+if(hotel === "Green Leaf") {
+  data = `
+  <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b">
+  <h2>Green Leaf Resort</h2>
+  <p>₹2200/night</p>
+  <a href="booking.html?hotel=Green Leaf"><button>Book Now</button></a>
+  `;
+}
+
+document.getElementById("room").innerHTML = data;
 </script>
 
 </body>
