@@ -1,72 +1,30 @@
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Book Hotel - Hyderabad</title>
-  <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-
-  <header>
-    <h1>Hotel Booking Form</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="hotels.html">Hotels</a>
-      <a href="booking.html">Booking</a>
-    </nav>
-  </header>
-
-  <main>
-    <h2>Fill Your Details</h2>
-
-    <form id="bookingForm">
-      
-      <label>Full Name:</label><br>
-      <input type="text" id="name" placeholder="Enter your name" required><br><br>
-
-      <label>Email:</label><br>
-      <input type="email" id="email" placeholder="Enter your email" required><br><br>
-
-      <label>Select Hotel:</label><br>
-      <select id="hotel" required>
-        <option value="">-- Select Hotel --</option>
-        <option>Hotel Sunrise</option>
-        <option>Hotel Blue Sky</option>
-        <option>Hotel Green Leaf</option>
-      </select><br><br>
-
-      <label>Check-in Date:</label><br>
-      <input type="date" id="checkin" required><br><br>
-
-      <label>Check-out Date:</label><br>
-      <input type="date" id="checkout" required><br><br>
-
-      <button type="submit">Book Now</button>
-
-    </form>
-
-  </main>
-
-  <footer>
-    <p>&copy; 2026 Hyderabad Hotel Booking</p>
-  </footer>
-
-  <script>
-    document.getElementById("bookingForm").addEventListener("submit", function(e) {
-      e.preventDefault();
-
-      const name = document.getElementById("name").value;
-      const hotel = document.getElementById("hotel").value;
-
-      if(name && hotel) {
-        alert("Thank you " + name + "! Your booking for " + hotel + " is confirmed.");
-      } else {
-        alert("Please fill all details!");
       }
     });
   </script>
+<form id="bookingForm">
 
+  <label>Name:</label><br>
+  <input type="text" id="name" required><br><br>
+
+  <label>Phone:</label><br>
+  <input type="tel" id="phone" required><br><br>
+
+  <label>Hotel:</label><br>
+  <select id="hotel" required>
+    <option>Luxury Palace Hotel</option>
+    <option>Royal Stay Inn</option>
+    <option>Green Leaf Resort</option>
+  </select><br><br>
+
+  <label>Check-in:</label><br>
+  <input type="date" id="checkin" required><br><br>
+
+  <label>Check-out:</label><br>
+  <input type="date" id="checkout" required><br><br>
+
+  <button type="button" onclick="sendWhatsApp()">Book on WhatsApp</button>
+
+</form>
 </body>
 </html>
