@@ -1,188 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>LuxuryStay Hotels</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
-
-<style>
-body{
-  margin:0;
-  font-family:'Poppins',sans-serif;
-  background:#f5f5f5;
-}
-
-/* NAVBAR */
-.navbar{
-  background:black;
-  color:white;
-  padding:15px 40px;
-  display:flex;
-  justify-content:space-between;
-}
-
-/* HERO */
-.hero{
-  height:80vh;
-  background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),
-  url('https://images.unsplash.com/photo-1501117716987-c8e1ecb210d9') center/cover;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  color:white;
-  text-align:center;
-}
-
-.hero h1{
-  font-size:50px;
-}
-
-/* ROOMS */
-.section{
-  padding:60px;
-}
-
-.rooms{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-  gap:25px;
-}
-
-.card{
-  background:white;
-  border-radius:12px;
-  overflow:hidden;
-  box-shadow:0 10px 20px rgba(0,0,0,0.1);
-  transition:0.3s;
-}
-
-.card:hover{
-  transform:translateY(-10px);
-}
-
-.card img{
-  width:100%;
-  height:200px;
-  object-fit:cover;
-}
-
-.card-content{
-  padding:15px;
-}
-
-.price{
-  color:#ff6600;
-  font-weight:bold;
-}
-
-.btn{
-  display:inline-block;
-  margin-top:10px;
-  padding:10px 15px;
-  background:black;
-  color:white;
-  text-decoration:none;
-  border-radius:5px;
-}
-</style>
-
+<title>Sunrise Hotels</title>
+<link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
-<!-- NAVBAR -->
-<div class="navbar">
-  <h2>LuxuryStay</h2>
-  <div>Rooms | Booking</div>
-</div>
+<header class="header">
+  <h2>🌅 Sunrise Hotels</h2>
+</header>
 
-<!-- HERO -->
-<section class="hero">
-  <div>
-    <h1>Book Premium Rooms</h1>
-    <p>Luxury experience at best price</p>
-  </div>
+<section class="slider">
+  <img id="slide" src="https://images.unsplash.com/photo-1501117716987-c8e1ecb210b5">
 </section>
 
-<!-- ROOMS -->
-<section class="section">
-  <h2>Our Rooms</h2>
-
-  <div class="rooms">
-
-    <!-- ROOM 1 -->
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa">
-      <div class="card-content">
-        <h3>Deluxe City View Room</h3>
-        <p class="price">₹2500 / Night</p>
-        <a href="#" class="btn" onclick="book('Deluxe City View Room')">Book Now</a>
-      </div>
-    </div>
-
-    <!-- ROOM 2 -->
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4">
-      <div class="card-content">
-        <h3>Executive Business Suite</h3>
-        <p class="price">₹4000 / Night</p>
-        <a href="#" class="btn" onclick="book('Executive Business Suite')">Book Now</a>
-      </div>
-    </div>
-
-    <!-- ROOM 3 -->
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945">
-      <div class="card-content">
-        <h3>Royal Presidential Suite</h3>
-        <p class="price">₹7000 / Night</p>
-        <a href="#" class="btn" onclick="book('Royal Presidential Suite')">Book Now</a>
-      </div>
-    </div>
-
-    <!-- ROOM 4 -->
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85">
-      <div class="card-content">
-        <h3>Family Deluxe Room</h3>
-        <p class="price">₹3000 / Night</p>
-        <a href="#" class="btn" onclick="book('Family Deluxe Room')">Book Now</a>
-      </div>
-    </div>
-
-    <!-- ROOM 5 -->
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461">
-      <div class="card-content">
-        <h3>Honeymoon Romantic Suite</h3>
-        <p class="price">₹5000 / Night</p>
-        <a href="#" class="btn" onclick="book('Honeymoon Romantic Suite')">Book Now</a>
-      </div>
-    </div>
-
-    <!-- ROOM 6 -->
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb">
-      <div class="card-content">
-        <h3>Infinity Pool Luxury Suite</h3>
-        <p class="price">₹8500 / Night</p>
-        <a href="#" class="btn" onclick="book('Infinity Pool Luxury Suite')">Book Now</a>
-      </div>
-    </div>
-
-  </div>
+<section class="search-box">
+  <input type="text" placeholder="City">
+  <button onclick="location.href='hotels.html'">Search Hotels</button>
 </section>
 
-<script>
-function book(room){
-  let number = "919876543210"; // अपना नंबर डालो
-  let message = "I want to book " + room;
-  let url = "https://wa.me/" + number + "?text=" + encodeURIComponent(message);
-  window.open(url, "_blank");
-}
-</script>
+<script src="js/script.js"></script>
 
 </body>
 </html>
