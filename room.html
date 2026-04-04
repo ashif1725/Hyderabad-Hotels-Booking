@@ -1,106 +1,105 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Room Details</title>
-<link rel="stylesheet" href="css/style.css">
+    <title>Rooms — Lemon Tree Hotel</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
+<h1>Our Rooms</h1>
 
-<header class="header">
-  <h2>🏨 Lemon Tree Hotel</h2>
-</header>
+<div class="room-list">
 
-<div id="room"></div>
+    <div class="room-card">
+        <a href="room-deluxe.html">
+            <h3>Deluxe Room</h3>
+            <p>Comfortable room, AC, breakfast included, ideal for 2 guests</p>
+        </a>
+    </div>
 
-<script>
-const params = new URLSearchParams(window.location.search);
-const room = params.get("room");
+    <div class="room-card">
+        <a href="room-executive.html">
+            <h3>Executive Room</h3>
+            <p>Larger than Deluxe, with workspace and better amenities</p>
+        </a>
+    </div>
 
-let data = "";
+    <div class="room-card">
+        <a href="room-premium.html">
+            <h3>Premium Room</h3>
+            <p>Modern interiors, extra facilities, sometimes with city view</p>
+        </a>
+    </div>
 
-// DELUXE ROOM
-if(room === "deluxe") {
-data = `
-<div class="room-card">
-<h2>Deluxe Room</h2>
+    <div class="room-card">
+        <a href="room-premier.html">
+            <h3>Premier Room</h3>
+            <p>Luxury bedding, bigger space, premium services</p>
+        </a>
+    </div>
 
-<div class="gallery">
-<img src="https://images.unsplash.com/photo-1566073771259-6a8506099945">
-<img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa">
-<img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b">
-<img src="https://images.unsplash.com/photo-1501117716987-c8e1ecb210b5">
+    <div class="room-card">
+        <a href="room-studio.html">
+            <h3>Studio Room</h3>
+            <p>Open layout, perfect for solo or couples</p>
+        </a>
+    </div>
+
+    <div class="room-card">
+        <a href="room-junior-suite.html">
+            <h3>Junior Suite</h3>
+            <p>One-bedroom suite, living area, business-friendly</p>
+        </a>
+    </div>
+
+    <div class="room-card">
+        <a href="room-executive-suite.html">
+            <h3>Executive Suite</h3>
+            <p>Separate bedroom + living area, more space, ideal for long stays</p>
+        </a>
+    </div>
+
+    <div class="room-card">
+        <a href="room-premium-suite.html">
+            <h3>Premium Suite</h3>
+            <p>High-end suite, extra amenities, great view</p>
+        </a>
+    </div>
+
+    <div class="room-card">
+        <a href="room-family.html">
+            <h3>Family Room</h3>
+            <p>Bigger room for families, extra beds, sometimes 2 rooms joined</p>
+        </a>
+    </div>
+
+    <div class="room-card">
+        <a href="room-club.html">
+            <h3>Club Room</h3>
+            <p>Access to club lounge and exclusive services</p>
+        </a>
+    </div>
+
+    <div class="room-card">
+        <a href="room-presidential.html">
+            <h3>Presidential Suite</h3>
+            <p>Top-tier luxury, multiple rooms, premium services</p>
+        </a>
+    </div>
+
+    <div class="room-card">
+        <a href="room-redfox.html">
+            <h3>Red Fox Room</h3>
+            <p>Economy rooms under Red Fox brand, budget-friendly</p>
+        </a>
+    </div>
+
+    <div class="room-card">
+        <a href="room-keys.html">
+            <h3>Keys by Lemon Tree Room</h3>
+            <p>Long-stay / essential stays, functional rooms</p>
+        </a>
+    </div>
+
 </div>
-
-<p class="price">₹3500 / night</p>
-
-<ul>
-<li>✔ King Size Bed</li>
-<li>✔ AC + WiFi</li>
-<li>✔ Breakfast Included</li>
-<li>✔ Smart TV</li>
-<li>✔ Room Service</li>
-</ul>
-
-<a href="booking.html"><button>Book Now</button></a>
-</div>`;
-}
-
-// FAMILY ROOM
-if(room === "family") {
-data = `
-<div class="room-card">
-<h2>Family Room</h2>
-
-<div class="gallery">
-<img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa">
-<img src="https://images.unsplash.com/photo-1566073771259-6a8506099945">
-<img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b">
-<img src="https://images.unsplash.com/photo-1501117716987-c8e1ecb210b5">
-</div>
-
-<p class="price">₹4500 / night</p>
-
-<ul>
-<li>✔ 2 Beds</li>
-<li>✔ AC + WiFi</li>
-<li>✔ Family Space</li>
-<li>✔ TV + Sofa</li>
-</ul>
-
-<a href="booking.html"><button>Book Now</button></a>
-</div>`;
-}
-
-// SUITE ROOM
-if(room === "suite") {
-data = `
-<div class="room-card">
-<h2>Suite Room</h2>
-
-<div class="gallery">
-<img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b">
-<img src="https://images.unsplash.com/photo-1566073771259-6a8506099945">
-<img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa">
-<img src="https://images.unsplash.com/photo-1501117716987-c8e1ecb210b5">
-</div>
-
-<p class="price">₹6500 / night</p>
-
-<ul>
-<li>✔ Luxury Suite</li>
-<li>✔ Living Area</li>
-<li>✔ Bathtub</li>
-<li>✔ Premium Service</li>
-</ul>
-
-<a href="booking.html"><button>Book Now</button></a>
-</div>`;
-}
-
-document.getElementById("room").innerHTML = data;
-</script>
-
 </body>
 </html>
