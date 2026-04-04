@@ -3,66 +3,119 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sunrise Hotels</title>
-<link rel="stylesheet" href="css/style.css">
-</head>
+<title>Hotel Booking</title>
 
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Hero Section */
+.hero {
+  background: url('https://images.unsplash.com/photo-1501117716987-c8e1ecb210d9') no-repeat center/cover;
+  height: 90vh;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 50px;
+}
+
+.hero p {
+  font-size: 20px;
+}
+
+/* Hotels */
+.container {
+  padding: 40px;
+}
+
+.hotels {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.card {
+  width: 300px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+}
+
+.card h3 {
+  margin: 10px;
+}
+
+.card p {
+  margin: 10px;
+}
+
+.btn {
+  display: block;
+  background: #ff6600;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  margin: 10px;
+  text-decoration: none;
+  border-radius: 5px;
+}
+</style>
+
+</head>
 <body>
 
-<!-- Header -->
-<header class="header">
-  <h2>🌅 Sunrise Hotels</h2>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="hotels.html">Hotels</a>
-    <a href="booking.html">Booking</a>
-  </nav>
-</header>
-
-<!-- 🔥 Slider Hero Section -->
-<section class="slider">
-  <img id="slide" src="https://images.unsplash.com/photo-1501117716987-c8e1ecb210b5">
-</section>
-
-<!-- 🔍 Search Box -->
-<section class="search-box">
-  <input type="text" placeholder="City">
-  <input type="date">
-  <input type="date">
-  <button onclick="searchHotel()">Search</button>
-</section>
-
-<!-- ⭐ Featured Hotels -->
-<section class="featured">
-  <h2>Featured Hotels</h2>
-
-  <div class="hotel-card">
-    <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945">
-    <h3>Luxury Palace Hotel</h3>
-    <p>⭐⭐⭐⭐⭐ Hyderabad</p>
+<!-- Hero -->
+<div class="hero">
+  <div>
+    <h1>Welcome to Luxury Hotels</h1>
+    <p>Book your dream stay now</p>
   </div>
+</div>
 
-  <div class="hotel-card">
-    <img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa">
-    <h3>Royal Stay Inn</h3>
-    <p>⭐⭐⭐⭐⭐ Hyderabad</p>
+<!-- Hotels -->
+<div class="container">
+  <h2>Our Hotels</h2>
+
+  <div class="hotels">
+
+    <!-- Hotel 1 -->
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945">
+      <h3>Sunrise Hotel</h3>
+      <p>Starting ₹2000/night</p>
+      <a href="tel:9876543210" class="btn">Book Now</a>
+    </div>
+
+    <!-- Hotel 2 -->
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa">
+      <h3>Trident Hotel</h3>
+      <p>Starting ₹3500/night</p>
+      <a href="tel:9876543210" class="btn">Book Now</a>
+    </div>
+
+    <!-- Hotel 3 -->
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4">
+      <h3>Royal Palace</h3>
+      <p>Starting ₹5000/night</p>
+      <a href="tel:9876543210" class="btn">Book Now</a>
+    </div>
+
   </div>
-
-  <div class="hotel-card">
-    <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b">
-    <h3>Green Leaf Resort</h3>
-    <p>⭐⭐⭐⭐⭐ Hyderabad</p>
-  </div>
-
-</section>
-
-<!-- Footer -->
-<footer>
-  <p>&copy; 2026 Sunrise Hotels</p>
-</footer>
-
-<!-- JS Link -->
-<script src="js/script.js"></script>
+</div>
 
 </body>
 </html>
