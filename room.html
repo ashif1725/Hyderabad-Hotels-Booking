@@ -9,7 +9,7 @@
 <body>
 
 <header class="header">
-  <h2>🌅 Sunrise Hotels</h2>
+  <h2>🏨 Hyderabad Hotel Booking</h2>
 </header>
 
 <div id="room"></div>
@@ -21,30 +21,36 @@ const hotel = params.get("hotel");
 let data = "";
 
 if(hotel === "Luxury Palace") {
-  data = `
-  <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945">
-  <h2>Luxury Palace Hotel</h2>
-  <p>₹3500/night</p>
-  <a href="booking.html?hotel=Luxury Palace"><button>Book Now</button></a>
-  `;
+data = `
+<div class="room-card">
+<img src="https://images.unsplash.com/photo-1566073771259-6a8506099945">
+<h2>Luxury Palace Deluxe Room</h2>
+<p>⭐⭐⭐⭐⭐ Premium Stay</p>
+<p class="price">₹3500 / night</p>
+<ul>
+<li>✔ AC Room</li>
+<li>✔ Free WiFi</li>
+<li>✔ Breakfast</li>
+<li>✔ Pool Access</li>
+</ul>
+<a href="booking.html"><button>Book Now</button></a>
+</div>`;
 }
 
 if(hotel === "Royal Stay") {
-  data = `
-  <img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa">
-  <h2>Royal Stay Inn</h2>
-  <p>₹2800/night</p>
-  <a href="booking.html?hotel=Royal Stay"><button>Book Now</button></a>
-  `;
-}
-
-if(hotel === "Green Leaf") {
-  data = `
-  <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b">
-  <h2>Green Leaf Resort</h2>
-  <p>₹2200/night</p>
-  <a href="booking.html?hotel=Green Leaf"><button>Book Now</button></a>
-  `;
+data = `
+<div class="room-card">
+<img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa">
+<h2>Royal Stay Deluxe Room</h2>
+<p>⭐⭐⭐⭐⭐ Luxury Stay</p>
+<p class="price">₹2800 / night</p>
+<ul>
+<li>✔ AC Room</li>
+<li>✔ Free WiFi</li>
+<li>✔ Parking</li>
+</ul>
+<a href="booking.html"><button>Book Now</button></a>
+</div>`;
 }
 
 document.getElementById("room").innerHTML = data;
