@@ -1,12 +1,38 @@
+body {
+  margin: 0;
+  font-family: Arial;
+  background: #f5f5f5;
+}
+
+/* Header */
+.header {
+  background: #0b3d91;
+  color: white;
+  text-align: center;
+  padding: 15px;
+}
+
+/* Hero */
+.hero {
+  background: url('https://images.unsplash.com/photo-1501117716987-c8e1ecb210b5');
+  height: 200px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Hotels */
 .hotel-container {
   padding: 15px;
 }
 
 .hotel-card {
   background: white;
-  margin-bottom: 20px;
   border-radius: 12px;
   overflow: hidden;
+  margin-bottom: 20px;
   box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
 
@@ -16,12 +42,8 @@
   object-fit: cover;
 }
 
-.hotel-info {
+.hotel-card .info {
   padding: 10px;
-}
-
-.hotel-info h3 {
-  margin: 5px 0;
 }
 
 .price {
@@ -29,18 +51,32 @@
   font-weight: bold;
 }
 
-.hotel-link {
-  text-decoration: none;
-  color: black;
-  display: block;
+/* Room Page */
+.room-card {
+  padding: 15px;
+}
+
+.room-card img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
 }
 
 button {
   width: 100%;
-  padding: 10px;
+  padding: 12px;
   background: #ff6600;
   color: white;
   border: none;
   border-radius: 5px;
-  margin-top: 10px;
+}
+
+/* Link */
+a {
+  text-decoration: none;
+  color: black;
 }
